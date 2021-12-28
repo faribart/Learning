@@ -1,0 +1,18 @@
+
+.box1{
+    width: 5vw;
+    height: 55vh;
+    background-color: salmon;
+}
+
+.box2{
+    width: 70vw;
+    height: 50vh;
+    background-color: silver;
+}
+.fontRem{
+    font-size: 1.5rem;
+}
+.fontEm{
+    font-size: 2em;
+}

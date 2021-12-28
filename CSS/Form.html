@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resetCSS.css">
+    <link rel="stylesheet" href="./FormCSS.css">
+    <link rel="stylesheet" href="./Font-CSS.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <form class="form" action="#">
+        <h2 class="form-title">فرم ثبت نام</h2>
+        <label for="name">نام</label>
+        <input type="text" name="name" id="name" class="formcontrol" placeholder="لطفا نام را وارد کنید" required>
+        <label for="email">ایمیل</label>
+        <input type="email" name="email" id="email" class="formcontrol invalid">
+        <label for="password">پسورد</label>
+        <input type="password" name="password" id="password" class="formcontrol" minlength="3">
+        <label for="password-confirm">تکرار پسورد</label>
+        <input type="password-confirm" name="password-confirm" id="password-confirm" class="formcontrol">
+        <label for="rules" class="checkbox">
+            <input type="checkbox" name="rules" id="rules">قوانین را میپذیرم
+            <span class="checkmark"></span>
+        </label>
+        <button class="btn btn-danger">ثبت نام</button>
+        <button class="btn btn-success">ثبت نام</button>
+    </form>
+</div>
+</body>
+</html>

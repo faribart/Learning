@@ -1,0 +1,101 @@
+html {
+    font-size: 100%;
+  }
+body{
+    padding: 20rem;
+}
+.container{
+    perspective:600px;
+    width: 200px;
+    height: 200px;
+}
+.cube{
+        position: relative;
+        transform: rotateX(45deg);
+        transform-style: preserve-3d;
+        /* transition: transform 2s , border 4s;
+        transition-property: transform;
+        transition-duration: 2s;
+        transition-timing-function: ease-in;
+        transition-timing-function: cubic-bezier(1, -0.01, 0, 1.27);
+        transition-delay: 2s; */
+}
+.cube:hover{
+    /* transform: rotateY(200deg); */
+    border: 20px solid;
+    /* transition-property: transform;
+    transition-duration: 5s;
+    transition-timing-function: ease-in; */
+    animation: animationCube 3s ease-in 1s infinite alternate;
+}
+.cube_face{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.front{
+    background-color: chartreuse;
+}
+.back{
+    background-color: darkgray;
+}
+.left{
+    background-color: salmon;
+}
+.right{
+    background-color: lightseagreen
+}
+.top{
+    background-color: blueviolet;
+}
+.bottom{
+    background-color: olive;
+}
+.front{
+    transform: rotateY(0deg) translateZ(100px);
+}
+.back{
+    transform: rotateY(180deg) translateZ(100px);
+}
+.left{
+    transform: rotateX(90deg) translateZ(100px);
+}
+.right{
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.top{
+    transform: rotateX(90deg) translateZ(100px);
+}
+.bottom{
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+/* @keyframes animationCube{
+from{
+transform: rotateY(0deg) scale(1);
+}
+to{
+transform: scaleY(220deg) scale(0.5);
+}
+} */
+
+@keyframes animationCube{
+    0%{
+    transform: rotateY(0deg) scale(0.25);
+    border: forestgreen;
+    }
+    40%{
+    transform: scaleY(220deg) scale(0.5);
+    border: gold;
+    }
+    60%{
+        transform: scaleY(220deg) scale(0.75);
+        border:darkviolet;
+        }
+    80%{
+        transform: scaleY(220deg) scale(1);
+        border: gray;
+        }
+    }

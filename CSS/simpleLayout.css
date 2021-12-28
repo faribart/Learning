@@ -1,0 +1,35 @@
+html{
+    font-family: "Vazir";
+    font-size: 100%;
+}
+
+body{
+    padding-top: 2rem;
+}
+
+p{
+    background-color: skyblue;
+    padding: 1.2rem 2rem;
+    color: snow;
+    text-align: center;
+    border-radius: 6px;
+}
+header,footer,section,aside{
+    margin: 0 1.5rem 2rem;
+}
+section{
+    float: left;
+
+}
+aside{
+    float: right;
+
+}
+.clearflex:after,
+.clearflex:before{
+    content: "";
+    display: table;
+}
+.clearflex:after{
+    clear: both;
+}

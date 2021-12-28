@@ -1,0 +1,44 @@
+/* header{
+    background: green;
+} */
+/* comment */
+/* p{
+    color: red;
+} */
+
+/* style with class */
+.text{
+    color: red;
+}
+ 
+/* style with id */
+
+#text{
+    color: blue;
+}
+
+.color-red{
+    color: brown;
+}
+
+.background-green{
+    background-color: green;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+
+.color-red.bold{
+    background-color: gray;
+}
+
+p.color-red{
+    font-style:italic;
+}
+
+#first .color-red .bold{
+    font-style:italic;
+
+} 

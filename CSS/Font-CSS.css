@@ -1,0 +1,21 @@
+@font-face{
+    font-family: "Vazir";
+    src:url(./Font/Vazir-Bold.eot);
+    src: url(./Font/Vazir-Black.woff2)format("woff2"),
+         url(./Font/Vazir-Black.woff)format("woff"),
+         url(./Font/Vazir-Black.ttf)format("truetype");
+}
+.fontStyle{
+    /* font-family: "Vazir", serif;
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 1.8; */
+    font: bold 20px/1.8 "Vazir";
+    text-decoration: underline wavy red;
+    text-shadow: 2px 2px red;
+    text-align: left;
+    white-space: pre;
+    word-spacing: 32px;
+    letter-spacing: 50px;
+    word-break: break-all;
+}

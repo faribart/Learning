@@ -1,0 +1,123 @@
+html{
+    font-size: 100%;
+    font-family: "Vazir";
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.form{
+    margin-top: 2rem;
+}
+
+.form .form-title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: brown;
+    margin-bottom: 1rem;
+}
+.form label{
+    font-weight: bold;
+}
+
+.form label,
+.form input:not([type="checkbox"]){
+    display: block;
+    margin-bottom: .7rem;
+}
+.form input:focus{
+    background-color: wheat;
+    outline: none;
+    border: 1px solid red !important;
+}
+.form input:invalid,
+.form input .invalid{
+    background-color: rgb(144, 121, 248);
+    border: 1px solid red !important;
+}
+.form input.formcontrol {
+    width: 100%;
+    width: 100%;
+    padding: 0.6rem 0.6rem;
+    font-family: inherit;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,.2);
+
+}
+.form input.formcontrol::placeholder{
+    color: red;
+    font-size: 1rem;
+}
+.form input.formcontrol::-moz-placeholder{
+    color: red;
+    font-size: 1rem;
+}
+.form input.formcontrol::-webkit-input-placeholder{
+    color: red;
+    font-size: 1rem;
+}
+.form input.formcontrol::-ms-input-placeholder{
+    color: red;
+    font-size: 1rem;
+}
+.checkbox{
+    position: relative;
+    padding: 2.1rem;
+    padding-top:.4rem ;
+}
+.checkbox input{
+    display: none;
+}
+
+
+.checkbox .checkmark{
+    width: 25px;
+    height: 25px;
+    background-color: gainsboro;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 4px;
+}
+
+.checkbox:hover .checkmark{
+    background-color: gray;
+}
+.checkbox input:checked ~ .checkmark{
+    background-color: hotpink;
+
+    }
+    
+.checkbox input:checked ~ .checkmark::after{
+display: block;
+}
+
+.checkmark::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    border: solid white;
+    height: 10px;
+    top: 5px;
+    right: 7px;
+    border-width: 0px 3px 3px 0px;
+    transform: rotate(45deg);
+    display: none;
+}
+.btn{
+    border: none;
+    font-family: inherit;
+    padding: .5rem 1rem;
+    border-radius: 2px;
+
+}
+.btn-danger{
+background-color: red;
+color: white;
+border: 1px solid black;
+}
+.btn-success{
+background-color: green;
+color: white;
+border: 1px solid black;
+}
