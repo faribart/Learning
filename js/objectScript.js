@@ -64,3 +64,13 @@ car_6.makeSmile=function(){
     console.log(":(");
 }
 var car_7=Object.create(car_5);
+
+
+
+var car={
+    make:"saipa",
+    model:1995,
+    displaydetails:function(){
+        return "maker"+this.make+" model"+this.model
+    }
+}
