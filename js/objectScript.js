@@ -69,8 +69,13 @@ var car_7=Object.create(car_5);
 
 var car={
     make:"saipa",
-    model:1995,
-    displaydetails:function(){
-        return "maker"+this.make+" model"+this.model
-    }
+    model:1995
 }
+
+function displayDetail(year , name){
+    console.log(year+" "+name)
+
+    return "maker"+this.make+" model"+this.model;
+}
+
+displayDetail.apply(car,[2012,"hessam"]);
