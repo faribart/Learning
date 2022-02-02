@@ -75,7 +75,26 @@ var car={
 function displayDetail(year , name){
     console.log(year+" "+name)
 
-    return "maker"+this.make+" model"+this.model;
+    console.log("maker"+this.make+" model"+this.model);
+}
+//apply
+displayDetail.apply(car,[2012,"hessam"]);
+
+//call
+displayDetail.call(car,2012,"hesam")
+
+//bind1
+displayDetail.bind(car,2012,"hessam")()
+
+//bind2
+var a=displayDetail.bind(car,2012,"hessssam")
+
+var car2={
+    make:"saipaaaaa",
+    model:1400,
+    displayDetail:function (name,year) {
+        console.log("maker "+this.make+" model "+this.model);        
+    }
 }
 
-displayDetail.apply(car,[2012,"hessam"]);
+car2.displayDetail.apply(car,[1401,"hhhhesam"])

@@ -1,0 +1,18 @@
+'use strict'
+
+var i=0
+var list=[]
+
+while(i<10){
+    if(i%2===0){
+console.log('a');
+    }
+    else{
+console.log('b');
+    }
+    if(i%2!=0){
+        list.push(i);
+    }
+}
+
+console.log(list)
