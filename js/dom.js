@@ -17,3 +17,5 @@ ul.appendChild(li2);
  document.querySelector('h2').after(ul)
 
  document.querySelector('h2').remove();
+
+
