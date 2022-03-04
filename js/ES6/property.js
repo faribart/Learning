@@ -118,12 +118,62 @@
 
 //spread
 
-function sum(a,b,c){
-    console.log(a+b+c)
+// function sum(a,b,c){
+//     console.log(a+b+c)
+// }
+
+// let list=[1,2,3]
+
+// // sum.apply(null,list)
+
+// sum(...list)
+
+//for of
+// let name='fariba'
+// let list=[1,2,3,5,4,8]
+// let obj={
+//     a:2,
+//     b:3
+// }
+// for (let iterator of obj) {
+//     console.log(iterator)
+// }
+
+//destructuring
+
+let list=[1,'fariba','rashtbar',false,3]
+
+// let item1=list[0]
+// let item2=list[1]
+// let [item1,item2,item3]=list
+
+// let [a,b]=[2,4]
+//default parameter
+// let [a=1,b=1]=[2]
+
+// function foo(){
+//     return [3,5,2,55]
+// }
+// let [a,b,...c]=foo()
+// console.log(a,b,c)
+
+// let obj={
+//     name:'fariba',
+//     age:54,
+//     foo:()=>{console.log('roocket')}
+// }
+
+// let{name,age,foo:bar}=obj
+// console.log(name,age,bar)
+
+//template string
+
+let obj={
+    name:'fariba'
 }
 
-let list=[1,2,3]
+// let text=`fariba ${obj.name}`
 
-// sum.apply(null,list)
+let text=`fariba \${fari}`
 
-sum(...list)
+console.log(text)
