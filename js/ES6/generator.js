@@ -1,6 +1,7 @@
 // const { setTimeout } = require("timers")
 
 
+
 // function* createnames(){
 //     console.log('process hesam')
 //     yield 'hessam'
@@ -101,24 +102,119 @@
 
 //call back
 
-function dosomething(callback,error){
-setTimeout(() => {
-    let title='this is article one'
-    if(!title){error('err')}
-    setTimeout(() => {
-        let data={user:''}
-        if(!data){error('error data')
-    return}
-        callback(data)
-    }, 2000);
-}, 2000);
-}
+// function dosomething(callback,error){
+// setTimeout(() => {
+//     let title='this is article one'
+//     if(!title){error('err')}
+//     setTimeout(() => {
+//         let data={user:''}
+//         if(!data){error('error data')
+//     return}
+//         callback(data)
+//     }, 2000);
+// }, 2000);
+// }
 
 
-console.log('run1')
-dosomething(function(data){
-console.log(data)},function(error){
-console.log(error)
+// console.log('run1')
+// dosomething(function(data){
+// console.log(data)},function(error){
+// console.log(error)
+// }
+// )
+// console.log('run3')
+
+
+//promise
+
+// let MyFirstPromise=new Promise((resolve,reject)=>{
+//     setTimeout(() => {
+//         // resolve('run2')
+//         reject('this is an error')
+//     }, 2000);
+// })
+
+// // console.log(MyFirstPromise)
+// MyFirstPromise.then(data =>{
+// console.log(date)
+// }
+// // , function(err){
+// //     console.log(err)
+// // }
+// )
+// .catch(err=>console.log(err))
+
+
+//without promise
+
+// function Getdata(url){
+//     const httpRequest=new XMLHttpRequest();
+//     httpRequest.open("GET",url)
+//     httpRequest.onreadystatechange=function(){
+//         console.log(XMLHttpRequest.DONE)
+//         if(this.readyState==XMLHttpRequest.DONE){
+//             if(this.status==200){
+//                 return this.responseText
+//             }
+//             else if(this.status==404)
+//             {
+//                 return 'data not find'
+//             }
+//             else{
+//                 return "somthings goes wrong"
+//             }
+//         }
+//     }
+//     httpRequest.send("https://jsonplaceholder.typicode.com/todos")
+// }
+
+
+function Getdata(url){
+return new Promise((resolve,reject)=>{
+    const httpRequest=new XMLHttpRequest();
+    httpRequest.open("GET",url)
+    httpRequest.onreadystatechange=function(){
+        console.log(XMLHttpRequest.DONE)
+        if(this.readyState==XMLHttpRequest.DONE){
+            if(this.status==200){
+             resolve(this.responseText)
+            }
+            else if(this.status==404)
+            {
+                reject('data not find')
+            }
+            else{
+                reject("somthings goes wrong")
+            }
+        }
+    }
+    httpRequest.send();
+})
 }
-)
-console.log('run3')
+
+function ParsetoJson(dataText){
+    return new Promise((resolve,reject)=>{
+        setTimeout(() => {
+            try {
+                resolve(JSON.parse(dataText))
+            } catch (error) {
+                reject(error)
+            }
+        }, 2000);
+    })
+}
+
+Getdata("https://jsonplaceholder.typicode.com/todos")
+.then(data =>{
+    ParsetoJson(data).then((json)=>{
+        console.log(json)
+    })
+})
+    .catch(err=>console.log(err))
+
+Getdata("https://jsonplaceholder.typicode.com/todos")
+.then(data =>ParsetoJson(data))
+    .then((json)=>{
+    console.log(json)
+    })
+    
