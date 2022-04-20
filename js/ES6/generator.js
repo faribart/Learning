@@ -218,3 +218,9 @@ Getdata("https://jsonplaceholder.typicode.com/todos")
     console.log(json)
     })
     
+function DoSomeThing(){
+    let name="hessam"
+    return Promise.resolve(name)
+}
+
+DoSomeThing().then((data)=>console.log(data))
