@@ -169,58 +169,89 @@
 // }
 
 
-function Getdata(url){
-return new Promise((resolve,reject)=>{
-    const httpRequest=new XMLHttpRequest();
-    httpRequest.open("GET",url)
-    httpRequest.onreadystatechange=function(){
-        console.log(XMLHttpRequest.DONE)
-        if(this.readyState==XMLHttpRequest.DONE){
-            if(this.status==200){
-             resolve(this.responseText)
-            }
-            else if(this.status==404)
-            {
-                reject('data not find')
-            }
-            else{
-                reject("somthings goes wrong")
-            }
-        }
-    }
-    httpRequest.send();
-})
-}
+// function Getdata(url){
+// return new Promise((resolve,reject)=>{
+//     const httpRequest=new XMLHttpRequest();
+//     httpRequest.open("GET",url)
+//     httpRequest.onreadystatechange=function(){
+//         console.log(XMLHttpRequest.DONE)
+//         if(this.readyState==XMLHttpRequest.DONE){
+//             if(this.status==200){
+//              resolve(this.responseText)
+//             }
+//             else if(this.status==404)
+//             {
+//                 reject('data not find')
+//             }
+//             else{
+//                 reject("somthings goes wrong")
+//             }
+//         }
+//     }
+//     httpRequest.send();
+// })
+// }
 
-function ParsetoJson(dataText){
-    return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-            try {
-                resolve(JSON.parse(dataText))
-            } catch (error) {
-                reject(error)
-            }
-        }, 2000);
-    })
-}
+// function ParsetoJson(dataText){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             try {
+//                 resolve(JSON.parse(dataText))
+//             } catch (error) {
+//                 reject(error)
+//             }
+//         }, 2000);
+//     })
+// }
 
-Getdata("https://jsonplaceholder.typicode.com/todos")
-.then(data =>{
-    ParsetoJson(data).then((json)=>{
-        console.log(json)
-    })
-})
-    .catch(err=>console.log(err))
+// Getdata("https://jsonplaceholder.typicode.com/todos")
+// .then(data =>{
+//     ParsetoJson(data).then((json)=>{
+//         console.log(json)
+//     })
+// })
+//     .catch(err=>console.log(err))
 
-Getdata("https://jsonplaceholder.typicode.com/todos")
-.then(data =>ParsetoJson(data))
-    .then((json)=>{
-    console.log(json)
-    })
+// Getdata("https://jsonplaceholder.typicode.com/todos")
+// .then(data =>ParsetoJson(data))
+//     .then((json)=>{
+//     console.log(json)
+//     })
     
-function DoSomeThing(){
-    let name="hessam"
-    return Promise.resolve(name)
-}
+// function DoSomeThing(){
+//     let name="hessam"
+//     // return Promise.resolve(name)
+//     return Promise.reject('error!')
+// }
 
-DoSomeThing().then((data)=>console.log(data))
+// DoSomeThing().then((data)=>console.log(data) , err=>console.log(err))
+
+let promise1=new Promise((resolve , reject)=>{
+    setTimeout(() => {
+        // reject("rejected!")
+        resolve("rejected!")
+    }, 2000);
+})
+
+let num=42
+
+let promise2=new Promise((resolve,reject)=>{
+    setTimeout(() => {
+        resolve("resoled!")
+    }, 1000);
+})
+
+
+// Promise.all([promise1,num,promise2])
+// .then(data => {
+//     console.log(data)
+// })
+// .catch(err=>console.log(err))
+
+
+
+Promise.race([promise1,num,promise2])
+.then(data => {
+    console.log(data)
+})
+.catch(err=>console.log(err))
