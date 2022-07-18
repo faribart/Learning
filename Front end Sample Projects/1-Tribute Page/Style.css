@@ -11,30 +11,38 @@ img{
 }
 
 #title{
+    text-align: center;
     text-shadow: 5px 5px 10px white;
     font-size: 7vh;
 }
 
 #caption{
 font-size: 17px;
-font-family: 'Gill Sans';
-margin-top: 0%;
+font-family: Gill Sans;
+/* margin-top: 0%; */
+
+
 }
 #Text-Header{
     color: white;
     text-shadow: 5px 5px 10px black;
     font-size: 35px;
     text-align: center;
-    margin: 11px 11px;
-    margin-top: 50px;
+    /* margin: 11px 11px;
+    margin-top: 50px; */
 }
 
 
 #tribute-data{
-    display: inline-block;
     background-color: rgb(46, 139, 87, 0.25);
     padding: 25px 25px;
+    box-shadow: 20px 20px 20px #98FB98;
+    font-family: Georgia;
+    margin: 11px;
+    margin-top: 50px;
 }
 
-
-
+#Fotter{
+    text-decoration: none;
+    color: black;
+}
