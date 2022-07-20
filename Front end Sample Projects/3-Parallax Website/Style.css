@@ -1,0 +1,64 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.parallax-1{
+    background: url(./942516.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 600px;
+}
+
+.parallax-1 h2{
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 300px;
+    width: 250px;
+    height: 32px;
+    padding: 10px;
+}
+
+.parallax-2{
+    background: url(./blue-mountains-4k-hd-high-resolution-wallpaper-preview.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 600px;
+}
+
+.parallax-2 h2{
+    margin: auto;
+    position: relative;
+    top: 300px;
+    width: 250px;
+    height: 37px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-family: Verdana;
+    text-align: center;
+}
+.par1{
+    text-align: left;
+    padding: 50px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+}
+
+.par2{
+    text-align: center;
+    padding: 25px;
+    font-size: 17px;
+    font-family: verdana;
+    background-color: black;
+    color: white;
+}
